@@ -10,4 +10,10 @@
 
     <color name="bakels_secondary">#83909F</color>
     <color name="bakels_primary">#003877</color>
+
+    <color name="violetPrimary">#D8BBFF</color>
+    <color name="violetSecondary">#DEAAFF</color>
+    <color name="lightBluePrimary">#C8E7FF</color>
+    <color name="lightBlueSecondary">#C0FDFF</color>
+    <color name="lightPink">#FFCBF2</color>
 </resources>
