@@ -33,10 +33,10 @@ public class ActivityLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        usernameText = findViewById(R.id.login_username_text_input);
-        passwordText = findViewById(R.id.login_password_text_input);
+        usernameText = findViewById(R.id.login_username_edit_text);
+        passwordText = findViewById(R.id.login_password_edit_text);
         loginButton = findViewById(R.id.login_button);
-        loadingBl = findViewById(R.id.progress_bar_loading);
+        loadingBl = findViewById(R.id.progress_bar_loading_login);
         registerTv = findViewById(R.id.link_register_text);
         mAuth = FirebaseAuth.getInstance();
 

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bakels_secondary"
-
     ><!-- aca va el tools context -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,11 +13,11 @@
         android:clipToPadding="false"
         android:orientation="vertical"
         android:padding="24dp"
-        android:paddingTop="16dp"
+        android:paddingTop="8dp"
         >
         <ImageView
-            android:layout_width="240dp"
-            android:layout_height="240dp"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="46dp"
             android:layout_marginBottom="16dp"
@@ -100,20 +99,21 @@
                 android:text="@string/button_register"
                 />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/link_login_text"
-                android:layout_marginTop="30dp"
-                android:layout_below="@id/register_button"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:text="@string/link_login_text"
-                />
+
 
         </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/link_login_text"
+            android:layout_marginTop="30dp"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="@string/link_login_text"
+            />
 
         <!--<RelativeLayout
             android:layout_width="match_parent"
@@ -155,4 +155,4 @@
         android:indeterminateDrawable="@drawable/progress_bar"
         android:visibility="gone"
         />
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

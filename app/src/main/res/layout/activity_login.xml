@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bakels_secondary"
-
     ><!-- aca va el tools context -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,11 +13,11 @@
         android:clipToPadding="false"
         android:orientation="vertical"
         android:padding="24dp"
-        android:paddingTop="16dp"
+        android:paddingTop="8dp"
         >
         <ImageView
-            android:layout_width="240dp"
-            android:layout_height="240dp"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="46dp"
             android:layout_marginBottom="16dp"
@@ -68,19 +67,21 @@
             android:orientation="horizontal"
             android:gravity="center"
             >
-            <com.google.android.material.button.MaterialButton
+            <!--<com.google.android.material.button.MaterialButton
                 android:id="@+id/login_button"
                 android:layout_width="140dp"
                 android:layout_height="60dp"
                 android:text="@string/button_login"
                 android:layout_marginRight="15dp"
-                />
-            <!-- <com.google.android.material.button.MaterialButton
-                android:id="@+id/register_button"
+                />-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/login_button"
                 android:layout_width="140dp"
                 android:layout_height="60dp"
-                android:text="@string/button_register"
-                /> -->
+                android:text="@string/button_login"
+                />
+
+
 
         </LinearLayout>
 
@@ -95,34 +96,6 @@
             android:textSize="18sp"
             android:text="@string/link_register_text"
             />
-        <!--<RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/login_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:text="@string/button_login"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:backgroundTint="@color/bakels_primary"
-            android:textColor="@color/bakels_secondary"
-            />
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/register_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:text="@string/button_register"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:backgroundTint="@color/bakels_secondary"
-                android:textColor="@color/black"
-                />
-        </RelativeLayout>-->
 
     </LinearLayout>
 
@@ -130,9 +103,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:id="@+id/progress_bar_loading"
+        android:id="@+id/progress_bar_loading_login"
         android:indeterminate="true"
         android:indeterminateDrawable="@drawable/progress_bar"
         android:visibility="gone"
         />
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
