@@ -19,6 +19,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class ActivityLogin extends AppCompatActivity {
     private TextInputEditText usernameText;
@@ -75,6 +76,10 @@ public class ActivityLogin extends AppCompatActivity {
                 }
             }
         });
+
+        //prueba de firebase
+        //FirebaseDatabase.getInstance().getReference().child("Programming Knowledge").child("Android").setValue("Abcd");
+
     }
     @Override
     protected void onStart(){

@@ -17,11 +17,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.bakelsfirebase.R;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
 
 public class ActivityRegistration extends AppCompatActivity {
 
@@ -57,6 +62,8 @@ public class ActivityRegistration extends AppCompatActivity {
         loadingBl = findViewById(R.id.progress_bar_loading);
         mAuth = FirebaseAuth.getInstance();
 
+        //FirebaseDatabase.getInstance().getReference().child("User Permissions").child("Brand").setValue("Inventory");
+
         loginTV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,15 +79,24 @@ public class ActivityRegistration extends AppCompatActivity {
                 String username = usernameText.getText().toString();
                 String password = passwordText.getText().toString();
                 String confirmPassword = confirmPasswordText.getText().toString();
+
+
+
                 if(!password.equals(confirmPassword)) {
                     Toast.makeText(ActivityRegistration.this, "Please enter the same password, check both password field", Toast.LENGTH_LONG).show();
                 } else if(TextUtils.isEmpty(username) && TextUtils.isEmpty(password) && TextUtils.isEmpty(confirmPassword)) {
                     Toast.makeText(ActivityRegistration.this, "Please add your credentials", Toast.LENGTH_LONG).show();
                 } else {
+                    //addPermission();
                     mAuth.createUserWithEmailAndPassword(username, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
+
+
+
+                                //FirebaseDatabase.getInstance().getReference().child("User Permissions").child(username).setValue("Inventory");
+
                                 loadingBl.setVisibility(View.GONE);
                                 Toast.makeText(ActivityRegistration.this, "User Register successfully", Toast.LENGTH_LONG).show();
                                 Intent i = new Intent(ActivityRegistration.this, ActivityLogin.class);
@@ -92,6 +108,7 @@ public class ActivityRegistration extends AppCompatActivity {
                             }
                         }
                     });
+
                 }
             }
         });
@@ -129,4 +146,25 @@ public class ActivityRegistration extends AppCompatActivity {
             }
         }
     }
+
+//    public void addPermission(){
+//        HashMap<String, Object> map = new HashMap<>();
+//        map.put(usernameText.getText().toString(),"Inventory");
+//
+//        FirebaseDatabase.getInstance().getReference().child("User Permissions")
+//                .push()
+//                .setValue(map)
+//                .addOnSuccessListener(new OnSuccessListener<Void>() {
+//                    @Override
+//                    public void onSuccess(Void unused) {
+//                        Toast.makeText(ActivityRegistration.this, "Permisos añadidos correctamente.", Toast.LENGTH_SHORT).show();
+//                    }
+//                })
+//                .addOnFailureListener(new OnFailureListener() {
+//                    @Override
+//                    public void onFailure(@NonNull Exception e) {
+//                        Toast.makeText(ActivityRegistration.this, "Error al añadir permisos.", Toast.LENGTH_SHORT).show();
+//                    }
+//                });
+//    }
 }

@@ -2,6 +2,7 @@
     <string name="app_name">BakelsFirebase</string>
     <string name="username">Nombre de usuario</string>
     <string name="password">Contraseña</string>
+    <string name="repeat_password">Confirme su contraseña</string>
 
     <string name="button_login">LOGIN</string>
     <string name="button_register">REGISTER</string>

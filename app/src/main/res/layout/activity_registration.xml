@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bakels_secondary"
+    android:background="@color/cardview_light_background"
     ><!-- aca va el tools context -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,14 +15,25 @@
         android:padding="24dp"
         android:paddingTop="8dp"
         >
-        <ImageView
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="46dp"
-            android:layout_marginBottom="16dp"
-            app:srcCompat="@drawable/bakels_logo"
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Registro de usuarios"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="24dp"
             />
+
+<!--        <ImageView-->
+<!--            android:layout_width="160dp"-->
+<!--            android:layout_height="160dp"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:layout_marginTop="46dp"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            app:srcCompat="@drawable/bakels_logo"-->
+<!--            />-->
 
         <!-- Campos de formulario -->
         <com.google.android.material.textfield.TextInputLayout
@@ -65,7 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:hint="@string/password"
+            android:hint="@string/repeat_password"
             app:errorEnabled="true"
             app:endIconMode="password_toggle">
             <com.google.android.material.textfield.TextInputEditText
@@ -110,7 +121,7 @@
             android:layout_marginTop="30dp"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textColor="@color/white"
+            android:textColor="@color/bakels_secondary"
             android:textSize="18sp"
             android:text="@string/link_login_text"
             />
